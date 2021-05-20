@@ -1,0 +1,21 @@
+    <table class="table table-hover">
+        <tr>
+            <td>
+                <img src="{{ film.image_url }}" class="img-fluid" style="height:250px;"/>
+            </td>
+            <td>
+                {{ film.title }}, {{ film.year }}
+                <br>
+                {{ film.summary }}
+                <br>
+                Genre: {{ film.genre }}
+                <br>
+                Available on: {{ film.platform }}
+                <div valign="bottom" align="right">
+                    <form action="{{ url_for('remove_film', film_id=film.id)}}" method="post">
+                        <input class="btn btn-danger btn-xs" type="submit" name="remove" value="Remove">
+                    </form>
+                </div>
+            </td>
+        </tr>
+    </table>

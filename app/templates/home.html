@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block app_content %}
+    <div class="text-center">
+            <img src="{{url_for('static', filename='images/home_page_icon.jpg')}}" alt="film icons" class="img-rounded" style="height:350px;">
+    </div>
+
+    <h1 style="text-align: center;">Welcome to FilmPicker!</h1>
+    <div>
+    	<h1 style="text-align: center;">What would you like to do?</h1>
+    </div>
+    <div class="text-center">
+        <a href="{{ url_for('addfilm') }}" class="btn btn-success btn-lg">Add Film</a>
+        <a href="{{ url_for('recommend_me') }} " class="btn btn-success btn-lg">Recommend Me A Film</a>
+        <a href="{{ url_for('browse') }}" class="btn btn-success btn-lg">Browse Films</a>
+    </div>
+
+{% endblock %}

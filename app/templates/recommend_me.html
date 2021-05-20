@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block app_content %}
+    <h1>What are you in the mood for?</h1>
+
+    <div>
+    	<a href="{{ url_for('recommendation') }}" class="btn btn-primary btn-lg">Random</a>
+    </div>
+
+{% endblock %}
